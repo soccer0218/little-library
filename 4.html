@@ -4,15 +4,48 @@
   <title>나의 작은 도서관</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="style.css">
+  <script>
+  function NightDayhandler(self)
+  {var target = document.querySelector('body');
+    if(self.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      self.value = 'day';
+
+    var alist = document.querySelectorAll('a');
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+      }
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      self.value = 'night';
+
+   var alist=document.querySelectorAll('a');
+   var i = 0;
+    while(i < alist.length){
+    alist[i].style.color='blue';
+    i = i + 1;
+    }
+  }
+}
+  </script>
+
 </head>
   <body>
+    <input type="button" value="night" onclick="
+    NightDayhandler(this)">
+    <input type="button" value="night" onclick="
+    NightDayhandler(this)">
       <h1><a href="index.html">나의 작은 도서관</a></h1>
 
       <div id="grid">
       <ol>
           <li><a href="1.html">지대넓얕</a></li>
-          <li><a href="3.html">데미안 </a></li>
-          <li><a href="2.html">나미야 잡화점의 기적 </a></li>
+          <li><a href="2.html">데미안 </a></li>
+          <li><a href="3.html">나미야 잡화점의 기적 </a></li>
           <li><a href="4.html">불안 </a></li>
           <li><a href="5.html">마음 </a></li>
           <li><a href="6.html">나란 무엇인가</a></li>
